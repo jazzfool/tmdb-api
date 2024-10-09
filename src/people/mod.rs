@@ -6,7 +6,7 @@ pub struct PersonShort {
     pub id: Option<u64>,
     pub person_id: Option<String>,
     pub credit_id: Option<String>,
-    pub name: String,
+    pub name: Option<String>,
     pub gender: Option<u64>,
     pub profile_path: Option<String>,
 }
