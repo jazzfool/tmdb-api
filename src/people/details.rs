@@ -86,7 +86,7 @@ mod tests {
             .await;
 
         let result = PersonDetails::new(287).execute(&client).await.unwrap();
-        assert_eq!(result.inner.id, 287);
+        assert_eq!(result.inner.id, Some(287));
     }
 
     #[tokio::test]
@@ -151,7 +151,7 @@ mod integration_tests {
 
         for id in [287, 4017570] {
             let result = PersonDetails::new(id).execute(&client).await.unwrap();
-            assert_eq!(result.inner.id, id);
+            assert_eq!(result.inner.id, Some(id));
         }
     }
 }

@@ -3,7 +3,8 @@ pub mod details;
 
 #[derive(Clone, Debug, PartialEq, Deserialize, Serialize)]
 pub struct PersonShort {
-    pub id: u64,
+    pub id: Option<u64>,
+    pub person_id: Option<String>,
     pub credit_id: Option<String>,
     pub name: String,
     pub gender: Option<u64>,
